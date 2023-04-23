@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
 public class FirstFragment extends Fragment {
 
@@ -23,13 +24,12 @@ public class FirstFragment extends Fragment {
         Button button2 = view.findViewById(R.id.button2);
 
 
-        /*button1.setOnClickListener(new View.OnClickListener() {
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_firstFragment_to_secondFragment);
+                Navigation.findNavController(view).navigate(R.id.secondFragment);
             }
-        });*/
-        button1.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.secondFragment, null));
+        });
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
