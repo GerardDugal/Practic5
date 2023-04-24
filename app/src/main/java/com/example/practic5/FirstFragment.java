@@ -27,19 +27,17 @@ public class FirstFragment extends Fragment {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.secondFragment);
+                /*Navigation.findNavController(view).navigate(R.id.secondFragment);*/
+                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.secondFragment);
             }
         });
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_firstFragment_to_thirdFragment);
+                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.thirdFragment);
             }
         });
         return view;
-    }
-    public boolean onSupportNavigateUp() {
-        return Navigation.findNavController(getActivity(), R.id.firstFragment).navigateUp();
     }
 }
