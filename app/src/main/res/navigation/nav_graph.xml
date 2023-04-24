@@ -23,7 +23,11 @@
         android:label="fragment_second"
         tools:layout="@layout/fragment_second"
         app:navGraph="@navigation/nav_graph"
-        app:defaultNavHost="true" />
+        app:defaultNavHost="true" >
+        <argument
+            android:name="to_second"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/thirdFragment"
         android:name="com.example.practic5.ThirdFragment"

@@ -4,16 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
     tools:context=".SecondFragment">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="338dp"
-        android:layout_height="668dp"
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="176dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="191dp"
+        android:layout_marginBottom="362dp"
+        android:text="TextView"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

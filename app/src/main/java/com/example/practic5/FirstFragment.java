@@ -22,24 +22,24 @@ public class FirstFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_first, container, false);
         Button button1 = view.findViewById(R.id.button1);
         Button button2 = view.findViewById(R.id.button2);
-
+        Bundle bundle1 = new Bundle();
+        Bundle bundle2 = new Bundle();
+        bundle1.putString("amount", "Hello there");
+        bundle2.putString("amount", "General kenobi");
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.secondFragment);
+                Navigation.findNavController(view).navigate(R.id.secondFragment, bundle1);
             }
         });
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_firstFragment_to_thirdFragment);
+                Navigation.findNavController(view).navigate(R.id.action_firstFragment_to_thirdFragment, bundle2);
             }
         });
         return view;
-    }
-    public boolean onSupportNavigateUp() {
-        return Navigation.findNavController(getActivity(), R.id.firstFragment).navigateUp();
     }
 }
