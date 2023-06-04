@@ -11,6 +11,8 @@
         android:label="fragment_first"
         tools:layout="@layout/fragment_first" >
         <action
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
             android:id="@+id/action_firstFragment_to_secondFragment"
             app:destination="@id/secondFragment" />
         <action
