@@ -1,10 +1,12 @@
 package com.example.practic5;
 
+import android.graphics.drawable.AnimatedVectorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,8 +26,8 @@ public class FirstFragment extends Fragment {
         Button button2 = view.findViewById(R.id.button2);
         Bundle bundle1 = new Bundle();
         Bundle bundle2 = new Bundle();
-        bundle1.putString("amount", "Hello there");
-        bundle2.putString("amount", "General kenobi");
+        bundle1.putString("amount", "я буратино");
+        bundle2.putString("amount", "я Черепаха Тортилла");
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +42,10 @@ public class FirstFragment extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.action_firstFragment_to_thirdFragment, bundle2);
             }
         });
+        ImageView imageView = view.findViewById(R.id.image);
+        imageView.setBackgroundResource(R.drawable.animated_vector);
+        AnimatedVectorDrawable animationDrawable = (AnimatedVectorDrawable) imageView.getBackground();
+        imageView.setOnClickListener(v -> animationDrawable.start());
         return view;
     }
 }
